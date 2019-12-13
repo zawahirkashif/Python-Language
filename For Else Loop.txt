@@ -1,0 +1,10 @@
+#####################
+# For Else Loop
+#####################
+# name = ["jaison", "Jamshed", "junejo", "Danish", "Muneer", "Dhara", "Mushtaq"]
+
+# for x in name:
+#     if x.startswith("J") or x.startswith("j") or x.startswith("D"):
+#         print(x)
+# else:
+#     print("not found")

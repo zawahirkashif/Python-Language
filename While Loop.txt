@@ -1,0 +1,10 @@
+#####################
+# While Loop
+#####################
+# initial_value = 0
+# final_value = 5
+
+# while final_value != initial_value:
+#     inp = int(input("Guess:"))
+# else:
+#         pass

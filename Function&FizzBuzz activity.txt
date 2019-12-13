@@ -1,0 +1,60 @@
+#####################
+# Function
+#####################
+
+
+# def power(val1, val2=3):
+#     return val1+val2
+
+
+# print(power(val1=2))
+# def multiply_list(*list):
+#     sum = 1
+#     for x in list:
+#         sum *= x
+#     return sum
+
+
+# print(multiply_list(5, 6, 8, 6, 4))
+
+# def Save_User(**user):
+#     print(user)
+
+
+# Save_User(Name=x, ID=y)
+# messege = "Global Variable"
+
+
+# def Variable():
+#     global messege
+#     messege = 'Local Variable'
+#     if True:
+#         print(messege)
+
+
+# Variable()
+# print(messege)
+
+# def multiply(*numbers):
+#     total = 1
+#     for number in numbers:
+#         total *= number
+#     return total
+
+
+# print("start")
+# print(multiply(1, 2, 3))
+# print("finish")
+
+# def Fizz_Buzz(input):
+#     if (input % 5 == 0) and (input % 3 == 0):
+#         return "FizzBuzz"
+#     elif input % 3 == 0:
+#         return "Fizz"
+#     elif input % 5 == 0:
+#         return "Buzz"
+#     else:
+#         print(input)
+
+
+# print(Fizz_Buzz(3))

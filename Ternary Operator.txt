@@ -1,0 +1,4 @@
+# # Ternary Operator
+
+# messege = "HEllo" if age >= 18 else "Bye"
+# print(messege)
