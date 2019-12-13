@@ -1,0 +1,7 @@
+# age = 18
+# if age >= 18:
+#     print("You are 18 or 18+")
+# elif age >= 15:
+#     print("you are 15 ")
+# else:
+#     print("you are too young")
