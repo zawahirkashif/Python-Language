@@ -1,0 +1,8 @@
+# some_randon_text = "Hello this is Muhammad Zawahir"
+# print(len(some_randon_text))
+# print(some_randon_text[0])
+# print(id(some_randon_text))
+# first = 'Muhammad'
+# last = 'Zawahir'
+
+# print(f"{first} {last}")
