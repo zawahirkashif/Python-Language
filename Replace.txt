@@ -1,0 +1,7 @@
+str = "Welcome to my github"
+word = input("Enter Word: ")
+replaceby = input("Replace With: ")
+
+str.replace(word,replaceby)
+
+

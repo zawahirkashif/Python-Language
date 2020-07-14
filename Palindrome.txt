@@ -1,0 +1,5 @@
+str = input("Enter String To Check Palindrome: ")
+if list(str) == list(reversed(str)):
+  print("Palindrome")
+else:
+  print("False")

@@ -1,0 +1,5 @@
+upper = input("Enter Value For Uppercase: ")
+lower = input("Enter Value For Uppercase: ")
+
+print("Upper case: ",upper.upper())
+print("Lower case: ",lower.lower())

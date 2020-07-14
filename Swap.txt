@@ -1,0 +1,13 @@
+
+a=2
+b=3
+c=5
+d=8
+e=100
+
+b,d,e,c,a =a, b,c,d,e
+print("a =", a)
+print("b =", b)
+print("c =",c )
+print("d =", d)
+print("e =", e)

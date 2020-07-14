@@ -1,0 +1,4 @@
+list = ['Hello','i','am']
+
+for i in range(len(list)):
+    print(list[i])
