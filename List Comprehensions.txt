@@ -1,0 +1,32 @@
+(i)Write a list comprehension which, from a list, generates a lowercased version of each string that has length greater than five. 
+
+Solution
+#Write a list comprehension which, from a list, generates a lowercased version of each string that has length greater than five.  
+
+list = ['I','am','MUHAMMAD','ZAWAHIR','AND','I','AM','A','BSCS','STUDENT','IN','IQRA','UNIVERSITY']
+
+for i in list:
+  if len(i) > 5:
+    print(i.lower())
+
+#By Muhammad Zawahir
+
+
+ 
+(ii)Write a Python program to print a specified list after removing the 0th, 4th and 5th elements 
+Sample List : ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow',’Teapink’]
+Expected Output : ['Green', 'White', 'Black']
+
+Solution
+
+#(ii)Write a Python program to print a specified list after removing the 0th, 4th and 5th elements 
+#Sample List : ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow',’Teapink’]
+#Expected Output : ['Green', 'White', 'Black']
+
+list_a = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow','Teapink']
+list_a.pop(0)
+list_a.pop(3)
+list_a.pop(3)
+list_a.pop(3)
+print(list_a)
+#By Muhammad Zawahir

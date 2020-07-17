@@ -1,0 +1,5 @@
+#Muhammad Zawahir
+value = int(input("Enter Value : "))
+
+x=pow(value,2)
+print(x)

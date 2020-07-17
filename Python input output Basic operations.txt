@@ -1,0 +1,52 @@
+(i)Write a Python program to swap 4 variables values (input four values.
+Sample input:
+Before swapping
+a=2,b=56,c=78,d=9
+After Swapping
+a=,9,b=78,c=56,d=2
+
+Solution:
+
+a=2
+b=56
+c=78
+d=9
+print("Before Swaping")
+print("a",a)
+print("b",b)
+print("c",c)
+print("d",d)
+#Swaping Values Without Third Variable
+d,c,b,a=a,b,c,d
+print("After Swaping")
+print("a",a)
+print("b",b)
+print("c",c)
+print("d",d)
+#By Muhammad Zawahir
+
+(ii) Write a Python program to convert temperatures to and from celsius,
+Fahrenheit.
+Formula : c/5 = f-32/9
+Expected Output :
+Enter temp in Celsius: 60°C
+Temperature in Fahrenheit is :140
+
+Solution:
+
+#Write a Python program to convert temperatures to and from Celsius,Fahrenheit
+messege = "Press 1 to convert Fahrenheit to Celsius"+"\n"+"Press 2 to convert Celsius to Fahrenheit"+"\n"
+calculate = float(input("Enter Value You Want To Convert\n"))
+value=float(input(messege))
+
+if value ==1:
+  celsius = (calculate - 32) * 5/9
+  print("Celsius=",celsius)
+
+elif value ==2:
+  fahrenheit = (calculate * 9/5) + 32
+  print("Fahrenheit=",fahrenheit)
+  
+else:
+  print("Invalid entry")
+#By Muhammad Zawahir

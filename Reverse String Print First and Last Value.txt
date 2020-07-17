@@ -1,0 +1,12 @@
+#Muhammad Zawahir
+str = "Hello I am MUHAMMAD ZAWAHIR I STUDY IN IQRA UNIVERSITY"
+#Length of string
+print(len(str))
+#Reverse String
+print(str[::-1])
+#Convert Lower And Upper Case
+print(str.lower())
+print(str.upper())
+#Assess First And Last Characher
+print("Frist Character : ",str[0])
+print("Last Character : ",str[-1])

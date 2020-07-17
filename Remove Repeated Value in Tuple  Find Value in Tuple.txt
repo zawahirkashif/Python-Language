@@ -1,0 +1,22 @@
+#Muhammad Zawahir
+tup = tuple((8,9,6,3,2,1,5,4,4,8))
+rep=[]
+#get 4th value and 5th Element
+print(tup[3:5])
+#Find The Repeated Value
+for i in tup:
+    if tup.count(i)>1:
+        rep.append(i)
+    else:
+        continue
+for x in rep:
+    while rep.count(x)>1:
+        rep.remove(x)
+
+print("Repeated items:",tuple(rep))
+    
+#Element(10) present in tuple
+if 10 in tup:
+  print("10 is present")
+else:
+  print("10 is not present")

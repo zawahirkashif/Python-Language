@@ -1,0 +1,17 @@
+#Muhammad Zawahir
+#Print Largest Value
+lis = [7,6,3,6,9,100,88,6,5,44,3,22]
+lisr = [1,77,55,33,56,8,99,77,55,22,3,6]
+#Find The LArgest Value
+print("Largent Value in is ",lis[-1])
+#Remove Duplicate
+for i in lis:
+    if lis.count(i)>1:
+        lis.remove(i)
+print("Dupliacte Removed")
+print(lis)
+#Take Two List And Check If Have Any Same Value
+if set(lis) & set(lisr):
+  print("True")
+else:
+  print("False")
