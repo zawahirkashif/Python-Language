@@ -1,0 +1,7 @@
+#Create a loop that sums the numbers from 100 to 200
+sum=0
+for i in range(99,201):
+  sum=sum+i
+ 
+print("Sum Of Range 100 t0 200: ",sum)
+#Code My Muhammad Zawahir

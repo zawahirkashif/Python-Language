@@ -1,0 +1,36 @@
+#Exercise 1:
+#(I)Cabinets and Boxes are objects that are mostly in cubic shape. Make a program that takes inputs like height, width and depth from user and then calculate volume of the cube:
+#volume = height ∗ width ∗ depth
+#After calculating volume of cube, compare it with following ranges and print the relevant label:
+#Volume Range
+#Label
+#1 cm3 – 10 cm3 #Extra Small
+#11 cm3 – 25 cm3 #Small
+#26 cm3 – 75 cm3 #Medium
+#76 cm3 – 100 cm3 #Large
+#101 cm3 – 250 cm3 #Extra Large
+#251 cm3 and above #Extra-Extra Large
+
+height=int(input("Enter Heignt : "))
+width= int(input("Enter Heignt : "))
+depth= int(input("Enter Heignt : "))
+
+volume = height*width*depth
+
+if volume >=1 and volume <= 10:
+  print("Extra Small")
+elif volume >=11 and volume <= 25:
+  print("Small")
+elif volume >=26 and volume <= 75:
+ print("Medium")
+elif volume >=76 and volume <= 100:
+ print("Large")
+elif volume >=101 and volume <= 250:
+ print("Extra Large")
+elif volume >=251:
+ print("Extra-Extra Large")
+else :
+  print("Enter a Valid Value")
+
+#Code My Muhammad Zawahir
+

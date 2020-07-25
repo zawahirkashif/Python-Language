@@ -1,0 +1,8 @@
+#Create a loop that counts all even numbers to 10
+count=0
+for i in range(0,11):
+  if i%2==0:
+    count+=1
+print("Total Even Numbers: ",count)
+
+#Code My Muhammad Zawahir

@@ -1,0 +1,7 @@
+#Make a program that lists the countries in the set
+clist = ['Canada','USA','Mexico','Australia']
+cset=set({})
+for i in clist:
+  cset.add(i)
+print(cset)
+#Code My Muhammad Zawahir

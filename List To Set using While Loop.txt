@@ -1,0 +1,9 @@
+#1. Make a program that lists the countries in the set below using a while loop.
+clist=['Canada','USA','Mexico','Australia']
+cset=set({})
+i=0
+while i < len(clist):
+  cset.add(clist[i])
+  i+=1
+print(cset)
+
