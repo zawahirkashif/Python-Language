@@ -1,0 +1,18 @@
+#Q#3 Write a Python program to count the number of even and 
+#odd numbers from a series of numbers. 
+
+#Let’s numbers be: 2, 4, 5, 7, 8, 9,11, 14,15,17 
+#Output : 
+#The no of Even numbers in series are : 4 
+#The no of Odd numbers in series are:6 
+numbers = (2, 4, 5, 7, 8, 9,11, 14,15,17)
+count_odd = 0
+count_even = 0
+for x in numbers:
+        if not x % 2:
+    	     count_even+=1
+        else:
+    	     count_odd+=1
+print("Number of even numbers :",count_even)
+print("Number of odd numbers :",count_odd)
+#Code By Muhammad Zawahir

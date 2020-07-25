@@ -1,0 +1,18 @@
+#Q#2 Write a Python program to convert temperatures to and 
+#from celsius, Fahrenheit. 
+#Formula : c/5 = f-32/9 
+#Expected Output : 
+#Enter temp in Celsius: 60°C 
+#Temperature in Fahrenheit is :140 
+messege = "Press 1 to convert Fahrenheit to Celsius"+"\n"+"Press 2 to convert Celsius to Fahrenheit"+"\n"
+calculate = float(input("Enter Value You Want To Convert\n"))
+value=float(input(messege))
+if value ==1:
+  celsius = (calculate - 32) * 5/9
+  print("Celsius=",celsius)
+elif value ==2:
+  fahrenheit = (calculate * 9/5) + 32
+  print("Fahrenheit=",fahrenheit)
+else:
+  print("Invalid entry")
+#Code By Muhammad Zawahir
