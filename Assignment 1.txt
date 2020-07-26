@@ -1,0 +1,340 @@
+#Question 1
+#Take distance d and time t from user with the appropriate data types, and then calculate the speed as per following formula: speed = d/t
+
+distance = float(input("Enter Distance: "))
+time = float(input("Enter Time : "))
+
+speed = distance/time
+
+print("Speed Will Be : ",speed)
+#code by Muhammad Zawahir
+
+#Question 2
+#Take user defined inputs for initial velocity v, time t and acceleration a. Use appropriate data
+#types for them accordingly. And then, calculate final velocity as per following formula.
+#Remember there is multiplication between a and t.
+
+v=float(input("Enter Initial velocity : "))
+a = float(input("Enter acceleration : "))
+t = float(input("Enter Time: "))
+
+FinalVelocity = v + (a*t)
+print(FinalVelocity)
+#code by Muhammad Zawahir
+
+#Question 3
+#Take initial velocity v, final velocity u and time t from user with their appropriate format
+#specifiers and data types accordingly. And then calculate acceleration as per following
+#formula: acceleration
+
+u=float(input("Enter Final velocity : "))
+v =float(input("Enter Initial velocity : "))
+t = float(input("Enter Time : "))
+
+acceleration = u-v/t
+
+print(acceleration)
+#code by Muhammad Zawahir
+
+#Question 4
+#Make a program that asks user to enter temperature in ferinheight f and you have to convert
+#that into celsius celcius
+
+f =  float(input("Enter Temperature In Ferinheight : "))
+c=(f-32)*(5/9)
+print(c)
+#code by Muhammad Zawahir
+
+#Question 5
+#ake mass m and velocity v from user and calculate kinetic energy as per following formula:
+
+m=float(input("Enter Mass: "))
+v=float(input("Enter Velocity : "))
+KineticEnergy = (1/2)*(m*(v**2))
+print(KineticEnergy)
+#code by Muhammad Zawahir
+
+#Question 6
+#Take initial velocity v, time t and acceleration a from user. And save them in respective data
+#types and calculate distance per following formula:
+
+v=float(input("Enter Velocity : "))
+t=float(input("Enter Time : "))
+a=float(input("Enter Acceleration : "))
+
+distance= (v*t)+(1/2)*(a*(t**2))
+
+print(distance)
+#code by Muhammad Zawahir
+
+#Question 7
+#Take the value of the mass of the first body m 1 and the mass of the second body m 2 from the
+#user. And calculate reduced mass per following formula:
+
+mi =float(input("Enter Mass 1 : "))
+mii =float(input("Enter Mass 2 : "))
+
+reducemass = (mi*mii)/(mi+mii)
+print(reducemass)
+#code by Muhammad Zawahir
+
+#Question 8
+#Make a program that calculates the Newtonian gravity as per following formula:
+mi =float(input("Enter Mass 1 : "))
+mii =float(input("Enter Mass 2 : "))
+r = float(input("Enter Radius : "))
+G = 6.673*(10**-11)
+
+NewtonGravity=(G*mi*mii)/r**2
+
+print(NewtonGravity)
+#code by Muhammad Zawahir
+
+#Question 9
+#Write a program that will calculate %composition of an element as per following formula:
+
+n = float(input("Enter Value of n: "))
+me = float(input("Entetr Value of me: "))
+mc =float(input("Entetr Value of mc: "))
+
+composition = ((n*me)/mc)*100
+print(composition)
+#code by Muhammad Zawahir
+
+#Question 10
+#Write a program that will calculate energy of an electron in the n th state in a hydrogen atom.
+#Below is the formula:
+R=2.18*(10**-18)
+n= float(input("Enter Value Of n : "))
+
+E=R*(1/(n**2))
+
+print(E)
+#code by Muhammad Zawahir
+
+
+#Question 11
+###Write a program that will calculate area of circle, where value of π is 3.142 and it should be a
+###constant value. area of circle
+r= float(input("Enter Radius: "))
+areaofcircle=3.142*(r**2)
+print(areaofcircle)
+#code by Muhammad Zawahir
+
+#Question 12
+#Write a program that will calculate area of trapezoid:
+bi= float(input("Enter Base1: "))
+bii= float(input("Enter Base2: "))
+h= float(input("Enter Height: "))
+
+f=(1/2)*(bi+bii)*h
+
+print(f)
+#code by Muhammad Zawahir
+
+#Question 13
+#Write a program that will calculate area of triangle:
+bi= float(input("Enter Base1: "))
+h= float(input("Enter Height: "))
+
+f=(1/2)*(bi)*h
+
+print(f)
+#code by Muhammad Zawahir
+
+
+#Question 14
+#Write a program that will tell you how many meters are there in a mile. Where the value of
+#mile is supposed to be input by user.
+
+mile = float(input("Enter Miles: "))
+meters=mile*1609.34
+print(meters)
+#code by Muhammad Zawahir
+
+
+#Question 15
+#Make a program where it is asked from user to enter the total amount, you have to answer
+#how much Zakat to be paid on that amount. Zakat is the 2.5% of the total amount.
+
+totalamount=float(input("Enter Total Amount: "))
+Zakat=2.5*totalamount/100
+print(Zakat)
+#code by Muhammad Zawahir
+
+
+#Question 16
+#Make a program that will (first) ask the number of marks achieved in subjects and (then after
+#clearing the screen) prints marks sheet. Total marks per subject is 100. The program should
+#cater 5 subjects at least.
+import os
+s=float(input("Enter Sindhi Marks: "))
+e=float(input("Enter English Marks: "))
+u=float(input("Enter Urdu Marks: "))
+m=float(input("Enter Mathematics Marks: "))
+i=float(input("Enter Islmiat Marks: "))
+os.system('cls')
+Total= s+e+u+m+i
+print("Subject \t\t\t Marks Obt \t\t\t Total Marks",
+      "\n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"+
+      "\nSindhi \t\t\t\t ",s," \t\t\t\t 100"+
+      "\nEnglish \t\t\t ",e," \t\t\t\t 100"+
+      "\nUrdu \t\t\t\t ",u," \t\t\t\t 100"+
+      "\nMaths \t\t\t\t ",m," \t\t\t\t 100"+
+      "\nIslmiat \t\t\t ",i," \t\t\t\t 100"+
+      "\n \t\t\t\t\t\t Total Marks = ",Total)
+
+#code by Muhammad Zawahir
+
+#Question 17
+#The following equation is meant to use all built-in function together, along with taking care of
+#precedence of operator. Take value of x from user. And calculate result per following formula:
+
+x= float(input("Enter Value Of x: "))
+
+final=(x+((x**2)*(x**(1/3)))/(x**x)) - (x -(x**0.5)/3*x)
+print(final)
+#code by Muhammad Zawahir
+
+
+#Question 18
+#the results of equation on right and left sides. Obviously, it makes sense the input you are going to take for the right side will be good for the left side as well, thus, you are to take the input once and use it wherever it is required.
+a = int(input("Enter Value Of a: "))
+b = int(input("Enter Value Of b: "))
+ans = (a+b)*((a**2)-(a*b)+(b**2))
+print(ans)
+#code by Muhammad Zawahir
+
+
+#Question 19
+#Write a program that will take all required data from user to solve the quadratic equation. Remember: from quadratic equation we yield two answers, i.e. positive and negative. Don’t confuse! repeat your code twice, once for the positive part, again for the negative. In end, modify your answer with the format accordingly.
+import cmath
+a = int(input("Enter Value Of a: "))
+b = int(input("Enter Value Of b: "))
+c = int(input("Enter Value Of c: "))
+d = (b**2) - (4*a*c)
+sol1 = (-b-cmath.sqrt(d))/(2*a)
+sol2 = (-b+cmath.sqrt(d))/(2*a)
+print('The solution are {0} and {1}'.format(sol1,sol2))
+#code by Muhammad Zawahir
+
+#Question 20
+#Design a menu driven program and perform the given operations using ‘TUPLES’
+#to convert a tuple to a string.
+#to add an item in a tuple.
+#to create a tuple with different data types
+#swap the two tuples
+
+option = int(input("Press 1 to convert a tuple to a string \n "+"Press 2 to add an item in a tuple \n"+"Press 3 to create a tuple with different data types \n"+"Press 4 to swap the two tuples\n"))
+
+if option == 1:
+  tuple = ('z','a','w','a','h','i','r') 
+  str =  ''.join(tuple)  
+  print(str) 
+elif option ==2:
+  print("You can't add elements to a tuple because of their immutable property")
+
+elif option == 3:
+  tuple1 = ("tuple", False, 3.2, 1)
+  print(tuple1)
+
+elif option ==4:
+  tuple = ('z','a','w','a','h','i','r')
+  tuple1 = ("tuple", False, 3.2, 1)
+  print("Before Swaping")
+  print(tuple)
+  print(tuple1)
+  print("After Swaping")
+  (tuple,tuple1)=(tuple1,tuple)
+  print(tuple)
+  print(tuple1)
+
+else:
+  print("Enter a Valid Number")
+
+#code by Muhammad Zawahir
+
+
+#Question 21
+#Arrange String characters such that lowercase letters should come first
+#Given input String of combination of the lower and upper case arrange characters insuch a way that all lowercase letters should come first.
+
+str1 = input("Enter String: ")
+words = str1.split()
+lower = []
+upper = []
+for char in str1:
+    if char.islower():
+        lower.append(char)
+    else:
+        upper.append(char)
+sorted_string = ''.join(lower + upper)
+print("\n arranging characters giving precedence to lowercase letters:")
+print(sorted_string)
+
+#code by Muhammad Zawahir
+
+#Question 22
+#Access the value of key ‘history’(concept of dictionary)
+
+thisdict = {
+  "class":{
+      "student":{
+          "name":"hirafarman",
+          "marks":{
+              "maths":70,
+              "History":100
+          }
+      }
+  }
+}
+
+res = thisdict.get('class', {}).get('student').get('marks').get('History') 
+
+print("Get The History Marks: "res)
+
+#code by Muhammad Zawahir
+  
+
+#Question 23
+#Delete set of keys from Python Dictionary
+sampleDict = {
+  "name": "Kelly",
+  "age":25,
+  "salary": 8000,
+  "city": "New york"
+  
+}
+
+del sampleDict['name'] 
+del sampleDict['salary'] 
+
+print(sampleDict)
+
+#code by Muhammad Zawahir
+
+
+#Question 24
+
+a = 90
+b = 69
+print("Bitwise AND Operator On 90 and 69 is = ", a & b)
+print("Bitwise OR Operator On 90 and 69 is = ", a | b)
+print("Bitwise EXCLUSIVE OR Operator On 90 and 69 is = ", a ^ b)
+print("Bitwise NOT Operator On 90 is = ", ~a)
+print("Bitwise LEFT SHIFT Operator On 90 is = ", a << 1) 
+print("Bitwise RIGHT SHIFT Operator On 69 is = ", b >> 1)
+
+#code by Muhammad Zawahir
+
+
+#Question 25
+list1 = ["b", "a" , "c"]
+list2 = ["g","h"]
+
+for x in list2:
+  list1.append(x)
+
+print(list1)
+
+#code by Muhammad Zawahir
