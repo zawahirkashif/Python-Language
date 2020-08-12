@@ -1,0 +1,324 @@
+#Qustion 1
+ 
+def insertionSort(h_letters): 
+    for i in range(1, len(h_letters)): 
+        key = h_letters[i] 
+        j = i-1
+        while j >=0 and key < h_letters[j] : 
+                h_letters[j+1] = h_letters[j] 
+                j -= 1
+        h_letters[j+1] = key 
+#List comprehension
+h_letters = [ letter for letter in 'zawahir' ]
+insertionSort(h_letters) 
+print ("Sorted List is:") 
+for i in range(len(h_letters)): 
+    print (h_letters[i]) 
+ 
+#code by Muhammad Zawahir 49312
+
+#Qustion 2
+
+def merge(h_letters, l, m, r): 
+	n1 = m - l + 1
+	n2 = r- m 
+	L = [0] * (n1) 
+	R = [0] * (n2)  
+	for i in range(0 , n1): 
+		L[i] = h_letters[l + i] 
+	for j in range(0 , n2): 
+		R[j] = h_letters[m + 1 + j] 
+	i = 0	 
+	j = 0	 
+	k = l	
+	while i < n1 and j < n2 : 
+		if L[i] <= R[j]: 
+			h_letters[k] = L[i] 
+			i += 1
+		else: 
+			h_letters[k] = R[j] 
+			j += 1
+		k += 1
+	while i < n1: 
+		h_letters[k] = L[i] 
+		i += 1
+		k += 1
+	while j < n2: 
+		h_letters[k] = R[j] 
+		j += 1
+		k += 1
+def mergeSort(h_letters,l,r): 
+	if l < r: 
+		m = (l+(r-1))//2
+		mergeSort(h_letters, l, m) 
+		mergeSort(h_letters, m+1, r) 
+		merge(h_letters, l, m, r) 
+h_letters = [ letter for letter in 'zawahir' ]
+mergeSort(h_letters,0,n-1) 
+print ("\n\nSorted List is") 
+for i in range(n): 
+	print (h_letters[i]) 
+
+#code by Muhammad Zawahir 49312
+
+#Qustion 3
+
+def partition(h_letters,low,high): 
+	i = ( low-1 )		
+	pivot = h_letters[high]	 
+
+	for j in range(low , high): 
+		if h_letters[j] <= pivot: 
+			i = i+1
+			h_letters[i],h_letters[j] = h_letters[j],h_letters[i] 
+
+	h_letters[i+1],h_letters[high] = h_letters[high],h_letters[i+1] 
+	return ( i+1 )  
+def quickSort(h_letters,low,high): 
+	if low < high: 
+		pi = partition(h_letters,low,high) 
+		quickSort(h_letters, low, pi-1) 
+		quickSort(h_letters, pi+1, high) 
+h_letters = [ letter for letter in 'zawahir' ]
+n = len(h_letters) 
+quickSort(h_letters,0,n-1) 
+print ("Sorted List is:") 
+for i in range(n): 
+	print (h_letters[i]), 
+
+
+#code by Muhammad Zawahir 49312
+
+#Qustion 4
+#Class Dog
+class Dog:
+# Class Attribute
+  species = 'mammal'
+# Initializer / Instance
+  def __init__(self,name, age): 
+    self.name = name
+    self.age = age
+#get biggest age function
+  def Get_Biggest(self):
+    if philo.age> mikey.age and philo.age>ralph.age:
+      print(f"{philo.name} is {philo.age} years old and oldest of all others")
+    elif mikey.age>philo.age and mikey.age > ralph.age:
+      print(f"{mikey.name} is {mikey.age} years old and oldest of all others")
+    else:
+      print(f"{ralph.name} is {ralph.age} years old and oldest of all others")
+# Instantiate the Dog object
+age=philo = Dog("Philo", 5)
+mikey = Dog("Mikey", 6)
+ralph = Dog("Ralph",9)
+# Access the instance attributes
+age.Get_Biggest()
+print("{} is {} and {} is {}".format(philo.name, philo.age, mikey.name, mikey.age))
+
+print("{0} is a {1}!".format(philo.name, philo.species))
+
+#class Pet
+class Pet:
+  species = 'mammal'
+  def __init__(self,name, age): 
+    self.name = name
+    self.age = age
+Tom= Pet("Tom", 6)
+Fetcher = Pet("Fatcher", 7)
+Larry = Pet("Larry",9)
+print(f"I have 3 dogs. \n {Tom.name} is {Tom.age}.\n {Fetcher.name} is {Fetcher.age}. \n {Larry.name} is {Larry.age}.\n And they all are {Pet.species}, of course  ")
+
+
+
+#code by Muhammad Zawahir 49312
+
+#Qustion 5
+
+class Account(object):
+  interest = 0.02
+  def __init__(self, account_holder):
+    self.balance = 0
+    self.holder = account_holder
+  def deposit(self, amount):
+    self.balance = self.balance + amount
+    print("Yes!")
+
+class CheckingAccount(Account):
+
+  def __init__(self, account_holder):
+    Account.__init__(self, account_holder)
+  def deposit(self, amount):
+   Account.deposit(self, amount)
+  print("Have a nice day!")
+a = Account("Billy")
+a.balance
+c = CheckingAccount("Eric")
+c.balance
+a.deposit(30)
+c.deposit(30)
+c.interest
+#code by Muhammad Zawahir 49312
+
+#Question 6
+#All method give same answer because same variable return if print hello or some thing in next class
+
+#Question 7
+class Circle:
+  def __init__(self,radius):
+    self.radius=radius
+  
+  def c_area(self):
+    return 3.14*(self.radius**2)
+  def c_perimeter(self):
+    return 2*3.14*self.radius
+
+
+r=float(input("Enter the Radius: "))
+c1=Circle(r)
+print("The area of circle radius "+str(r)+" is "+ str(c1.c_area()))
+print("The Perimeter of circle radius "+str(r)+" is "+str(c1.c_perimeter()))
+#code by Muhammad Zawahir 49312
+
+#Question 8
+class Garments:
+    def __init__(self):
+        self._name=name
+
+    def __init__(self,ID,_typ,stock,value,oderQty):
+        self._typ=_typ
+        self.stock=stock
+        self.value=value
+    def addGarment(self,price,temp,Qty):
+        self.price=0.0
+        self.temp=0.0
+        self.Qty=0
+        temp=Qty+price
+        print("Your temp value is:",temp)
+    def show_Detail(self,colour,item,price,temp,oderQty):
+        self.colour="red"
+        self.item="Shirt"
+        self.price=0
+        self.oderQty=0
+        self.temp=0
+        temp=int(oderQty*price)
+        print("price",temp)
+    def setOrder(self,create_date,orderQty,price,items):
+        self.create_date='Aug ,9,2020'
+        self.orderQty=0
+        self.price=0
+        self.items='Shirts'
+        print('Order Now')
+        temp=int(orderQty*price)
+        print("Thanks for shopping",temp)
+
+a=Garments(1,"m",100,4000,3000)
+a.addGarment(700,0,9)
+a.show_Detail('red','Jeans',3000,0,2)
+a.setOrder('Aug ,11,2020',5,13000,'shirt')
+
+#code by Muhammad Zawahir 49312
+
+#Question 9 
+import time
+
+class Account:
+  def __init__(self):
+    self.__id=0
+    self.__balance=0
+    self.__annualInterestRate=0
+    self.__dateCreated=time.strftime("%d %B %Y")
+
+  def __init__(self,id,balance):
+    self.__id=id
+    self.__balance=balance
+    self.__dateCreated=time.strftime("%d %B %Y")
+  def setId(self,id):
+    self.__id=id
+
+  def getId(self):
+    return self.__id
+  
+  def setBalance(self,balance):
+    self.__balance=balance
+
+  def getBalance(self):
+    return "The Current Balance is "+str(self.__balance)
+  
+  def setAnnualInterestRate(self,annualInterestRate):
+    self.__annualInterestRate=annualInterestRate
+
+  def getAnnualInterestRate(self):
+    return self.__annualInterestRate
+
+  def getDateCreated(self):
+    return self.__dateCreated
+
+  def getMonthlyInterestRate(self):
+    return self.__annualInterestRate/12
+
+  def getMonthlyInterest(self):
+    return self.__balance*(self.getMonthlyInterestRate()/100)
+
+
+  def withdraws(self,ammount):
+    if self.__balance<=0:
+      print("Balance is 0")
+    elif self.__balance<ammount:
+      print("Account balance is insufficient")
+    else:
+      self.__balance-=ammount
+      print("you have withdraw an ammount of "+str(ammount))
+
+  def deposit(self,ammount):
+    self.__balance+=ammount
+    print("you have deposited an ammount of "+str(ammount))
+
+A1=Account(1122,20000)
+A1.setAnnualInterestRate(4.5)
+A1.withdraws(2500)
+print(A1.getBalance())
+A1.deposit(3000)
+print(A1.getBalance(),"\n") 
+
+print("The Monthly Interest is "+str(A1.getMonthlyInterest()))
+
+print("The Date of the account when created is "+A1.getDateCreated())
+
+#code by Muhammad Zawahir 49312
+
+
+#Question 10
+import math
+class point:
+  def __init__(self,x,y):
+    self.x=x
+    self.y=y
+  
+  def show(self):
+    print("The X value is "+str(self.x))
+    print("The Y value is "+str(self.y))
+  
+  def move(self,x,y):
+    self.x=x
+    self.y=y
+
+  @staticmethod
+  def dist(A, B):
+    x_portion= (B.x-A.x)**2
+    y_portion= (B.y-A.y)**2
+    ans=math.sqrt(x_portion + y_portion)
+    return ans
+
+print("Point A")
+
+p1=point(1,3)
+p1.show()
+
+print("\nPoint B")
+
+p2=point(5,8)
+p2.show()
+
+print("\nThe Distance Between A & B is "+"{:.2f}".format(point.dist(p1,p2),))
+
+#code by Muhammad Zawahir 49312
+
