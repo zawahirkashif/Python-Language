@@ -1,0 +1,417 @@
+import random
+class environment(object):
+    def _init_(self):
+        self.locationcond=[[1,0],[0,1]]
+        self.locationcond[0][0]=random.randint(0,1)
+        self.locationcond[0][1]=random.randint(0,1)
+        self.locationcond[1][0]=random.randint(0,1)
+        self.locationcond[1][1]=random.randint(0,1)
+    
+class vacuumagent(environment):
+    def _init_(self,environment):
+        
+        
+        print('environment.locationcond')
+        score = 0
+        vacuumlocation=random.randint(0,3)
+        if vacuumlocation==0:
+            print('Vacuum is in room A')
+            if environment.locationcond[0][0]==1:
+                print('location A is dirty')
+                environment.locationcond[0][0]=0;
+                print('Location A is cleaned')
+                if environment.locationcond[0][1]==1:
+                    print('Location B is dirty')
+                    environment.locationcond[0][1]=0;
+                    print('Location B has been cleaned')
+                    print('Moving to Location C')
+                    if environment.locationcond[1][0]==1:
+                           print('Location C is dirty')
+                           environment.locationcond[1][0]=0;
+                           score+=1
+                           print('Location C has been cleaned')
+                           score-=1
+                           if environment.locationcond[1][1]==1:
+                               print('Location D is dirty')
+                               environment.locationcond[1][1]=0;
+                               score+=1
+                               print('Location D has been cleaned')
+                               score-=1
+                    else:
+                        if environment.locationcond[1][1]==1:
+                             print('Location D is dirty')
+                             environment.locationcond[1][1]=0;
+                             score+=1
+                             print('Location D has been cleaned')
+                             score-=1
+                else:
+                    if environment.locationcond[1][0]==1:
+                           print('Location C is dirty')
+                           environment.locationcond[1][0]=0;
+                           score+=1
+                           print('Location C has been cleaned')
+                           score-=1
+                           if environment.locationcond[1][1]==1:
+                               print('Location D is dirty')
+                               environment.locationcond[1][1]=0;
+                               score+=1
+                               print('Location D has been cleaned')
+                               score-=1
+                    else:
+                        if environment.locationcond[1][1]==1:
+                             print('Location D is dirty')
+                             environment.locationcond[1][1]=0;
+                             score+=1
+                             print('Location D has been cleaned')
+                             score-=1
+                    
+                    
+                    
+            elif environment.locationcond[0][1]==1:
+                    print('Location B is dirty')
+                    environment.locationcond[0][1]=0;
+                    print('Location B has been cleaned')
+                    print('Moving to Location C')
+                    if environment.locationcond[1][0]==1:
+                        print('Location C is dirty')
+                        environment.locationcond[1][0]=0;
+                        score+=1
+                        print('Location C has been cleaned')
+                        score-=1
+                        if environment.locationcond[1][1]==1:
+                            print('Location D is dirty')
+                            environment.locationcond[1][1]=0;
+                            score+=1
+                            print('Location D has been cleaned')
+                            score-=1
+                    else:
+                        if environment.locationcond[1][1]==1:
+                             print('Location D is dirty')
+                             environment.locationcond[1][1]=0;
+                             score+=1
+                             print('Location D has been cleaned')
+                             score-=1
+                               
+            elif environment.locationcond[1][0]==1:
+                print('Location C is dirty')
+                environment.locationcond[1][0]=0;
+                score+=1
+                print('Location C has been cleaned')
+                score-=1
+                if environment.locationcond[1][1]==1:
+                    print('Location D is dirty')
+                    environment.locationcond[1][1]=0;
+                    score+=1
+                    print('Location D has been cleaned')
+                    score-=1
+            else:
+                if environment.locationcond[1][1]==1:
+                    print('Location D is dirty')
+                    environment.locationcond[1][1]=0;
+                    score+=1
+                    print('Location D has been cleaned')
+                    score-=1
+                    
+        if vacuumlocation==1:
+               
+            print('Vacuum is in room B')
+            if environment.locationcond[0][1]==1:
+                print('location B is dirty')
+                environment.locationcond[0][1]=0;
+                print('Location B is cleaned')
+                if environment.locationcond[0][0]==1:
+                    print('Location A is dirty')
+                    environment.locationcond[0][0]=0;
+                    print('Location A has been cleaned')
+                    print('Moving to Location D')
+                    if environment.locationcond[1][1]==1:
+                           print('Location D is dirty')
+                           environment.locationcond[1][1]=0;
+                           score+=1
+                           print('Location D has been cleaned')
+                           score-=1
+                           if environment.locationcond[1][0]==1:
+                               print('Location C is dirty')
+                               environment.locationcond[1][0]=0;
+                               score+=1
+                               print('Location C has been cleaned')
+                               score-=1
+                    else:
+                        if environment.locationcond[1][0]==1:
+                             print('Location C is dirty')
+                             environment.locationcond[1][0]=0;
+                             score+=1
+                             print('Location C has been cleaned')
+                             score-=1
+                else:
+                    if environment.locationcond[1][1]==1:
+                           print('Location D is dirty')
+                           environment.locationcond[1][1]=0;
+                           score+=1
+                           print('Location D has been cleaned')
+                           score-=1
+                           if environment.locationcond[1][0]==1:
+                               print('Location C is dirty')
+                               environment.locationcond[1][0]=0;
+                               score+=1
+                               print('Location C has been cleaned')
+                               score-=1
+                    else:
+                        if environment.locationcond[1][0]==1:
+                             print('Location C is dirty')
+                             environment.locationcond[1][0]=0;
+                             score+=1
+                             print('Location C has been cleaned')
+                             score-=1
+                        
+                    
+                    
+                    
+            elif environment.locationcond[0][0]==1:
+                    print('Location a is dirty')
+                    environment.locationcond[0][0]=0;
+                    print('Location A has been cleaned')
+                    print('Moving to Location A')
+                    if environment.locationcond[1][1]==1:
+                        print('Location D is dirty')
+                        environment.locationcond[1][1]=0;
+                        score+=1
+                        print('Location D has been cleaned')
+                        score-=1
+                        if environment.locationcond[1][0]==1:
+                            print('Location C is dirty')
+                            environment.locationcond[1][0]=0;
+                            score+=1
+                            print('Location C has been cleaned')
+                            score-=1
+                    else:
+                        if environment.locationcond[1][0]==1:
+                             print('Location C is dirty')
+                             environment.locationcond[1][0]=0;
+                             score+=1
+                             print('Location C has been cleaned')
+                             score-=1
+                               
+            elif environment.locationcond[1][1]==1:
+                print('Location D is dirty')
+                environment.locationcond[1][1]=0;
+                score+=1
+                print('Location D has been cleaned')
+                score-=1
+                if environment.locationcond[1][0]==1:
+                    print('Location C is dirty')
+                    environment.locationcond[1][0]=0;
+                    score+=1
+                    print('Location C has been cleaned')
+                    score-=1
+            else:
+                if environment.locationcond[1][0]==1:
+                    print('Location C is dirty')
+                    environment.locationcond[1][0]=0;
+                    score+=1
+                    print('Location C has been cleaned')
+                    score-=1
+        if vacuumlocation==2:
+               
+            print('Vacuum is in room C')
+            if environment.locationcond[1][0]==1:
+                print('location C is dirty')
+                environment.locationcond[1][0]=0;
+                print('Location C is cleaned')
+                if environment.locationcond[1][1]==1:
+                    print('Location D is dirty')
+                    environment.locationcond[1][1]=0;
+                    print('Location D has been cleaned')
+                    print('Moving to Location A')
+                    if environment.locationcond[1][1]==1:
+                           print('Location A is dirty')
+                           environment.locationcond[1][1]=0;
+                           score+=1
+                           print('Location A has been cleaned')
+                           score-=1
+                           if environment.locationcond[0][1]==1:
+                               print('Location B is dirty')
+                               environment.locationcond[0][1]=0;
+                               score+=1
+                               print('Location B has been cleaned')
+                               score-=1
+                    else:
+                        if environment.locationcond[0][1]==1:
+                             print('Location B is dirty')
+                             environment.locationcond[0][1]=0;
+                             score+=1
+                             print('Location B has been cleaned')
+                             score-=1
+                else:
+                    if environment.locationcond[0][0]==1:
+                           print('Location A is dirty')
+                           environment.locationcond[0][0]=0;
+                           score+=1
+                           print('Location A has been cleaned')
+                           score-=1
+                           if environment.locationcond[0][1]==1:
+                               print('Location B is dirty')
+                               environment.locationcond[0][1]=0;
+                               score+=1
+                               print('Location B has been cleaned')
+                               score-=1
+                    else:
+                        if environment.locationcond[0][1]==1:
+                             print('Location B is dirty')
+                             environment.locationcond[0][1]=0;
+                             score+=1
+                             print('Location B has been cleaned')
+                             score-=1
+                        
+                    
+                    
+                    
+            elif environment.locationcond[1][1]==1:
+                    print('Location D is dirty')
+                    environment.locationcond[1][1]=0;
+                    print('Location D has been cleaned')
+                    print('Moving to Location A')
+                    if environment.locationcond[0][0]==1:
+                        print('Location A is dirty')
+                        environment.locationcond[0][0]=0;
+                        score+=1
+                        print('Location A has been cleaned')
+                        score-=1
+                        if environment.locationcond[0][1]==1:
+                            print('Location B is dirty')
+                            environment.locationcond[0][1]=0;
+                            score+=1
+                            print('Location B has been cleaned')
+                            score-=1
+                    else:
+                        if environment.locationcond[0][1]==1:
+                             print('Location B is dirty')
+                             environment.locationcond[0][1]=0;
+                             score+=1
+                             print('Location B has been cleaned')
+                             score-=1
+                        
+                               
+            elif environment.locationcond[0][0]==1:
+                print('Location A is dirty')
+                environment.locationcond[0][0]=0;
+                score+=1
+                print('Location A has been cleaned')
+                score-=1
+                if environment.locationcond[0][1]==1:
+                    print('Location B is dirty')
+                    environment.locationcond[0][1]=0;
+                    score+=1
+                    print('Location B has been cleaned')
+                    score-=1
+            else:
+                if environment.locationcond[0][1]==1:
+                    print('Location B is dirty')
+                    environment.locationcond[0][1]=0;
+                    score+=1
+                    print('Location B has been cleaned')
+                    score-=1
+        if vacuumlocation==3:
+            print('Vacuum is in room D')
+            if environment.locationcond[1][1]==1:
+                print('location D is dirty')
+                environment.locationcond[1][1]=0;
+                print('Location D is cleaned')
+                if environment.locationcond[1][0]==1:
+                    print('Location C is dirty')
+                    environment.locationcond[1][0]=0;
+                    print('Location C has been cleaned')
+                    print('Moving to Location B')
+                    if environment.locationcond[0][1]==1:
+                           print('Location B is dirty')
+                           environment.locationcond[0][1]=0;
+                           score+=1
+                           print('Location B has been cleaned')
+                           score-=1
+                           if environment.locationcond[0][0]==1:
+                               print('Location A is dirty')
+                               environment.locationcond[0][0]=0;
+                               score+=1
+                               print('Location A has been cleaned')
+                               score-=1
+                    else:
+                        if environment.locationcond[0][0]==1:
+                             print('Location A is dirty')
+                             environment.locationcond[0][0]=0;
+                             score+=1
+                             print('Location A has been cleaned')
+                             score-=1
+                else:
+                    if environment.locationcond[0][1]==1:
+                           print('Location B is dirty')
+                           environment.locationcond[0][1]=0;
+                           score+=1
+                           print('Location B has been cleaned')
+                           score-=1
+                           if environment.locationcond[0][0]==1:
+                               print('Location A is dirty')
+                               environment.locationcond[0][0]=0;
+                               score+=1
+                               print('Location A has been cleaned')
+                               score-=1
+                    else:
+                        if environment.locationcond[0][0]==1:
+                             print('Location A is dirty')
+                             environment.locationcond[0][0]=0;
+                             score+=1
+                             print('Location A has been cleaned')
+                             score-=1
+                    
+                    
+                    
+            elif environment.locationcond[1][0]==1:
+                    print('Location C is dirty')
+                    environment.locationcond[1][0]=0;
+                    print('Location C has been cleaned')
+                    print('Moving to Location B')
+                    if environment.locationcond[0][1]==1:
+                        print('Location B is dirty')
+                        environment.locationcond[0][1]=0;
+                        score+=1
+                        print('Location B has been cleaned')
+                        score-=1
+                        if environment.locationcond[0][0]==1:
+                            print('Location A is dirty')
+                            environment.locationcond[0][0]=0;
+                            score+=1
+                            print('Location A has been cleaned')
+                            score-=1
+                    else:
+                        if environment.locationcond[0][0]==1:
+                             print('Location A is dirty')
+                             environment.locationcond[0][0]=0;
+                             score+=1
+                             print('Location A has been cleaned')
+                             score-=1
+                               
+            elif environment.locationcond[0][1]==1:
+                print('Location B is dirty')
+                environment.locationcond[0][1]=0;
+                score+=1
+                print('Location B has been cleaned')
+                score-=1
+                if environment.locationcond[0][0]==1:
+                    print('Location A is dirty')
+                    environment.locationcond[0][0]=0;
+                    score+=1
+                    print('Location A has been cleaned')
+                    score-=1
+            else:
+                if environment.locationcond[0][0]==1:
+                    print('Location A is dirty')
+                    environment.locationcond[0][0]=0;
+                    score+=1
+                    print('Location A has been cleaned')
+                    score-=1
+                             
+        print (environment.locationcond)
+        print ("Performance Measurement: " + str(score))
+        
+        
+theEnvironment = environment()
+theVacuum = vacuumagent(theEnvironment)
