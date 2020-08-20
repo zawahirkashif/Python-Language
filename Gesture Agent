@@ -1,0 +1,27 @@
+def gesture(path):
+    file_1 = open(path, "r")
+    mood = file_1.readline()
+ 
+    cont = file_1.readline()
+   
+    if mood == ('happy\n') and cont == ('positive') or cont == ('negative'):
+        print("smile")
+    if mood == ('happy\n') and cont == ('unsure'):
+        print("nod")
+    if mood == ('sad'):
+        print("i am frown")
+    if mood == ('neutral\n') and cont == ('positive') or cont == ('negative'):
+        print("nod")
+    if mood == ('neutral\n') and cont == ('unsure'):
+        print("blink")
+
+
+
+
+f1 = open("abc", "w")
+
+
+f1.write("neutral\n")
+f1.write("positive")
+
+gesture("abc")
