@@ -1,6 +1,7 @@
+ 
 import random
 class environment(object):
-    def _init_(self):
+    def __init__(self):
         self.locationcond=[[1,0],[0,1]]
         self.locationcond[0][0]=random.randint(0,1)
         self.locationcond[0][1]=random.randint(0,1)
@@ -8,7 +9,7 @@ class environment(object):
         self.locationcond[1][1]=random.randint(0,1)
     
 class vacuumagent(environment):
-    def _init_(self,environment):
+    def __init__(self,environment):
         
         
         print('environment.locationcond')
